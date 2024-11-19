@@ -8,10 +8,11 @@ const Sidebar = () => {
   const [showProjects, setShowProjects] = useState(true);
   const [showPriority, setShowPrority] = useState(true);
 
-  const sidebarClassNames = `fixed flex flex-col h-[100%] justify-between shadow-xl transition-all duration-300 h-full z-40 dark:bg-black overflow-y-auto bg-white w-64`;
+  const sidebarClassNames = `fixed flex flex-col h-[100%] justify-between shadow-xl
+   transition-all duration-300 h-full z-40 dark:bg-black overflow-y-auto bg-white w-64`;
 
   return (
-    <div className="{sidebarClassNames}">
+    <div className={sidebarClassNames}>
       <div className="flex h-[100%] w-full flex-col justify-start">
         {/* TOP LOGO */}
         <div className="z-50 flex min-h-[56px] w-64 items-center justify-between bg-white px-6 pt-3 dark:bg-black">
