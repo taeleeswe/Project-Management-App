@@ -1,6 +1,6 @@
 "use client";
 
-import { LockIcon } from "lucide-react";
+import { Icon, LockIcon, LucideIcon } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -37,6 +37,25 @@ const Sidebar = () => {
       </div>
     </div>
   );
+};
+
+interface SidebarLinkProps {
+  href: string;
+  icon: LucideIcon;
+  label: string;
+  isCollapsed: boolean;
+}
+
+const SidebarLink = ({
+  href,
+  icon: Icon,
+  label,
+  isCollapsed,
+}: SidebarLinkProps) => {
+  const pathname = usePathname();
+  const isActive =
+    pathname === href || (pathname === "/" && href === "/dashboard");
+  const screenWidth = window.innerWidth;
 };
 
 export default Sidebar;
